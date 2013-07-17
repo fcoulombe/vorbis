@@ -11,15 +11,19 @@ include ( cmake/dist.cmake )
 include ( CheckIncludeFile )
 
 # Specify library include directories
-	include_directories("${PROJECT_SOURCE_DIR}/include")
-	include_directories("${PROJECT_SOURCE_DIR}/include/vorbis")
+include_directories("${PROJECT_SOURCE_DIR}/include")
+include_directories("${PROJECT_SOURCE_DIR}/include/vorbis")
 
-    include_directories("${OGG_ROOT}/include")
+include_directories("${OGG_ROOT}/include")
 
+IF(${MSVC})
+      SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd4305")  #conversion double to float
+      SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd4244")  #conversion double to float
+ENDIF()
 
 # First, compiler definitions for building the library
-	ADD_DEFINITIONS(-D_USRDLL)
-	ADD_DEFINITIONS(-DLIBVORBIS_EXPORTS)
+ADD_DEFINITIONS(-D_USRDLL)
+ADD_DEFINITIONS(-DLIBVORBIS_EXPORTS)
 
 set(VORBIS_SRCS
        lib/analysis.c
