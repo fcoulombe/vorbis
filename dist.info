@@ -1,0 +1,11 @@
+--- This file is part of LuaDist project
+
+name = "vorbis"
+version = "3.6.1.0"
+
+desc = "Ogg library."
+author = "The oggvorbis people"
+license = "A BSD-STYLE SOURCE LICENSE"
+url = "http://xiph.org/"
+maintainer = "Francois Coulombe"
+
