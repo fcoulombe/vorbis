@@ -14,6 +14,8 @@ include ( CheckIncludeFile )
 	include_directories("${PROJECT_SOURCE_DIR}/include")
 	include_directories("${PROJECT_SOURCE_DIR}/include/vorbis")
 
+    include_directories("${OGG_ROOT}/include")
+
 
 # First, compiler definitions for building the library
 	ADD_DEFINITIONS(-D_USRDLL)
