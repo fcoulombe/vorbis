@@ -20,27 +20,27 @@ include ( CheckIncludeFile )
 	ADD_DEFINITIONS(-DLIBVORBIS_EXPORTS)
 
 set(VORBIS_SRCS
-       lib\analysis.c
-        lib\bitrate.c
-        lib\block.c
-        lib\codebook.c
-        lib\envelope.c
-        lib\floor0.c
-        lib\floor1.c
-        lib\info.c
-        lib\lookup.c
-        lib\lpc.c
-        lib\lsp.c
-        lib\mapping0.c
-        lib\mdct.c
-        lib\psy.c
-        lib\registry.c
-        lib\res0.c
-        lib\sharedbook.c
-        lib\smallft.c
-        lib\synthesis.c
-        lib\vorbisenc.c
-        lib\window.c)
+       lib/analysis.c
+        lib/bitrate.c
+        lib/block.c
+        lib/codebook.c
+        lib/envelope.c
+        lib/floor0.c
+        lib/floor1.c
+        lib/info.c
+        lib/lookup.c
+        lib/lpc.c
+        lib/lsp.c
+        lib/mapping0.c
+        lib/mdct.c
+        lib/psy.c
+        lib/registry.c
+        lib/res0.c
+        lib/sharedbook.c
+        lib/smallft.c
+        lib/synthesis.c
+        lib/vorbisenc.c
+        lib/window.c)
 
 IF (${BUILD_SHARED_LIBS})
 	ADD_LIBRARY(libvorbis SHARED ${BASE_SRCS} )
@@ -57,7 +57,7 @@ ENDIF()
 
 
 set(VORBISFILE_SRCS
-    lib\vorbisfile.c)
+    lib/vorbisfile.c)
     
 IF (${BUILD_SHARED_LIBS})
 	ADD_LIBRARY(libvorbisfile SHARED ${BASE_SRCS} )
