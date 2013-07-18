@@ -13,6 +13,7 @@ include ( CheckIncludeFile )
 # Specify library include directories
 include_directories("${PROJECT_SOURCE_DIR}/include")
 include_directories("${PROJECT_SOURCE_DIR}/include/vorbis")
+include_directories("${PROJECT_SOURCE_DIR}/lib")
 
 include_directories("${OGG_ROOT}/include")
 
