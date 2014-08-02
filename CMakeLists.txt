@@ -50,13 +50,13 @@ set(VORBIS_SRCS
         lib/window.c)
 
 IF (${BUILD_SHARED_LIBS})
-	ADD_LIBRARY(libvorbis SHARED ${VORBIS_SRCS} )
+	ADD_LIBRARY(vorbis SHARED ${VORBIS_SRCS} )
 ELSE()
-    ADD_LIBRARY(libvorbis STATIC ${VORBIS_SRCS} )
+    ADD_LIBRARY(vorbis STATIC ${VORBIS_SRCS} )
 ENDIF()
 
 # Install Vorbis Library
-	install_library(libvorbis)
+	install_library(vorbis)
 
 # Install Vorbis Headers
 	install_header(include/)
@@ -67,13 +67,13 @@ set(VORBISFILE_SRCS
     lib/vorbisfile.c)
     
 IF (${BUILD_SHARED_LIBS})
-	ADD_LIBRARY(libvorbisfile SHARED ${VORBISFILE_SRCS} )
+	ADD_LIBRARY(vorbisfile SHARED ${VORBISFILE_SRCS} )
 ELSE()
-    ADD_LIBRARY(libvorbisfile STATIC ${VORBISFILE_SRCS} )
+    ADD_LIBRARY(vorbisfile STATIC ${VORBISFILE_SRCS} )
 ENDIF()
 
 # Install Vorbis Library
-	install_library(libvorbisfile)
+	install_library(vorbisfile)
 
 # Install Vorbis Headers
 	install_header(include/)
